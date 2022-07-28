@@ -1,7 +1,7 @@
 FROM alpine
 
 RUN apk add -v --update \
-            python \
+            python3 \
             py-pip \
             groff \
             less \
