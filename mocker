@@ -1,0 +1,11 @@
+FROM alpine
+
+RUN apk add -v --update \
+            python3 \
+            py-pip \
+            groff \
+            less \
+            mailcap && \
+        pip install --upgrade awscli s3cmd python-magic && \
+        apk -v --purge del py-pip && \
+        rm /var/cache/apk/*
